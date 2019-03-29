@@ -1,0 +1,41 @@
+<!--pages/weather/weather.wxml-->
+<view class='page'>
+  <view class='top'>
+    <view class='input'>
+      <input placeholder='输入城市名进行查询' placeholder-class='grayStyle' bindinput='bindKeyInput'></input>
+    </view>
+    <view class='icon'>
+      <icon type='search' size='25' bindtap='queryWeather'></icon>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='city'>
+      <text>{{city}}</text>
+    </view>
+    <view class='today'>
+      <text>{{today}}</text>
+    </view>
+    <view>
+      <image src='{{pic}}' mode='aspectFit' style='width: 400rpx;height: 400rpx;'></image>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='weather'>
+      <text>{{weather}}</text>
+    </view>
+    <view class='right'>
+      <view class='wind'>
+        <text>{{wind}}</text>
+      </view>
+      <view class='temp'>
+        <text>{{temp}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='tips'>
+    <view>
+    <text>{{tips}}</text>
+    </view>
+  </view>
+</view>

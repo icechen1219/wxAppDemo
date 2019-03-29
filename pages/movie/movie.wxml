@@ -1,0 +1,25 @@
+<!--pages/movie/movie.wxml-->
+<view class='top'>
+  <view class='input'>
+    <button size='mini' class="{{index==1?'on':''}}" bindtap='showInTheaters'>正在热映</button>
+    <button size='mini' class="{{index==2?'on':''}}" bindtap='showCommingSoon'>即将上映</button>
+    <button size='mini' class="{{index==3?'on':''}}" bindtap='showTop250'>电影排行</button>
+  </view>
+</view>
+<view class="wrapper">
+  <view class="main-section">
+    <scroll-view class="right-main scroll" scroll-y="true">
+      <view class="item" wx:for="{{movies}}" wx:for-item="film" data-index="{{index}}" bindtap='showDetail'>
+        <image src="{{film.logo}}" class="dish-img"></image>
+        <view class="info">
+          <text class="desc">{{film.title}}</text>
+          <text class="tips">{{film.directors}} {{film.mainland_pubdate}} {{film.duration}}</text>
+          <text class="price">{{film.casts}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class='footer'>
+  <text>----我是有底线的----</text>
+</view>

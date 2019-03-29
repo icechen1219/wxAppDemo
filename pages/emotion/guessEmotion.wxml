@@ -1,0 +1,33 @@
+<!--pages/emotion/guessEmotion.wxml-->
+<view class='imageArea' wx:if='{{imageUrl!=null}}'>
+  <image src='{{imageUrl}}' mode='aspectFit'></image>
+  <view class="faceDetail" style='top:{{faceTop}};left:{{faceLeft}};width:{{faceWidth}};height:{{faceHeight}};' wx:if="{{faceTop}}"></view>
+  <view class="info"  style='top:{{infoTop}};left:{{infoLeft}};' wx:if="{{infoTop}}">
+    <text>{{infoGender}}{{infoBeauty}}</text>
+    <div class="nav"></div>
+  </view>
+</view>
+<view class='result' style='top:{{resTop}};' wx:if='{{errMsg==null}}'>
+  <text wx:if='{{faceList.length>1}}' class='readMethod'>从左往右：</text>
+  <view wx:for='{{faceList}}' wx:for-item="face" data-index="{{index}}" bindtap='showFaceDetail'>
+    <text wx:if='{{face.age}}'>年龄：{{face.age}}</text>
+    <text wx:if='{{face.expression!=undefined}}'>开心指数 : {{face.expression}}</text>
+  </view>
+</view>
+<view class='error' wx:else>
+  <text>{{errMsg}}</text>
+</view>
+<view class='yanzhi' wx:if='{{remark}}'>
+  <text>{{remark}}</text>
+</view>
+<button class='choose' bindtap='upload' type='primary'>选择照片</button>
+<view class='helper'>
+  <text>上传照片即可测出颜值、年龄、性别、心情指数等数据~快来看看准不准吧~</text>
+</view>
+<view class='helper'>
+  <text>说明：默认为专业评委打分，可信度较高。另点右侧文字会显示大众评委打分，仍有参考价值，enjoy it^_^</text>
+</view>
+<view class='more-fun'>
+  <text bindtap='gotoPoem'>更多好玩(^_^)</text>
+</view>
+<!-- <canvas canvas-id='myCanvas' class='canvas-box'></canvas> -->

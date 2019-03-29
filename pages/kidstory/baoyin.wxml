@@ -1,0 +1,22 @@
+<view class="banner">
+<text>陈宝音小朋友，爸爸祝你第二个儿童节快乐哟~</text>
+<text>这次爸爸送你一份特殊的节日礼物，属于你自己的童话专辑。</text>
+<text>爸爸希望你，像童话里的宝音那样，天真无邪快乐成长。</text>
+</view>
+
+<view class="wrapper">
+  <view class="main-section">
+    <scroll-view class="right-main scroll" scroll-y="true">
+      <view class="item" wx:for="{{stories}}" wx:for-item="story" data-index="{{index}}" bindtap='showDetail'>
+        <image src="{{baseUrl}}{{story.cover}}" wx:if="{{story.cover!=null}}" class="dish-img"></image>
+        <view class="info" wx:if="{{story.cover!=null}}">
+          <text class="title">{{story.title}}</text>
+          <text class="index">{{story.album}} {{index+1}}/{{stories.count}}集</text>
+          <view class='clock'><image src='/images/clock.png' style='width:12px;height:12px;border:0;margin-right:10rpx;'></image>
+          <text style='display:inline;height:24px;line-height:24px;'>{{story.duration}}</text></view>
+        </view>
+        <text class='play' data-index='{{index}}' wx:if="{{story.cover!=null}}" bindtap='playStory'>{{story.state==0?'播放':'停止'}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

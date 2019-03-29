@@ -1,0 +1,80 @@
+page {
+    background-color: #fff;
+    height: 100%;
+}
+.banner{
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 24rpx;
+  color: pink;
+}
+.wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.main-section {
+    display: flex;
+}
+.right-main {
+    flex: 5;
+}
+.right-main .item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px #f3f3f3 solid;
+}
+.right-main .item .dish-img {
+    flex: 1;
+    width: 120rpx;
+    height: 120rpx;
+}
+.right-main .item .info {
+    flex: 3;
+    padding: 0 20rpx 20rpx 20rpx;
+    padding-bottom: 20rpx;
+    /* border-bottom: 2rpx solid #bbb; */
+}
+.right-main .item text {
+    display: block; 
+    line-height: 1.5em;
+    width: 450rpx; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.right-main .item .title {
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.right-main .item .index {
+    font-size: 14px;
+    color: #ccc;
+    text-indent: 20rpx;
+}
+.right-main .item .clock {
+    font-size: 14px;
+    color: #ccc;
+    text-indent: 20rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+}
+
+.play{
+  flex: 1;
+  height: 60rpx;
+  background: yellow;
+  color: darkorange;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: auto 0;
+  padding: auto 0;
+  text-align: center;
+  border: 1rpx solid yellow;
+  border-radius: 5rpx;
+}

@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class='weather'>
+    <navigator url='../weather/weather' open-type='navigate' hover-class='navigator-hover'>查询今日天气</navigator>
+  </view>
+  <view class='weather'>
+    <navigator url='../movie/movie' open-type='navigate' hover-class='navigator-hover'>电影推荐</navigator>
+  </view>
+</view>
+<view class='footer'>
+  <text class='text'>{{content}}</text>
+</view>

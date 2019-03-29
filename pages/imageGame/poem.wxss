@@ -1,0 +1,150 @@
+/* pages/emotion/guessEmotion.wxss */
+
+.body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tips {
+  width: 100%;
+  height: 150rpx;
+  border: 2rpx solid #cdcdcd;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.choose {
+  width: 90%;
+  margin-top: 20rpx;
+}
+
+.upload {
+  width: 90%;
+  margin: 0 auto;
+  text-align: right;
+  height: 80rpx;
+  display: flex;
+}
+
+.upload .write {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.upload label {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+/*swtich样式-start*/
+
+/*swtich整体大小*/
+
+.wx-switch-input {
+  width: 82rpx !important;
+  height: 50rpx !important;
+  margin: auto 0;
+}
+
+/*白色样式（false的样式）*/
+
+.wx-switch-input::before {
+  width: 80rpx !important;
+  height: 50rpx !important;
+}
+
+/*绿色样式（true的样式）*/
+
+.wx-switch-input::after {
+  width: 40rpx !important;
+  height: 50rpx !important;
+}
+
+/*swtich样式end*/
+
+.imageArea {
+  width: 90%;
+  height: 700rpx;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.imageArea image {
+  width: 500rpx;
+  height: 500rpx;
+  border: 2rpx solid #cdcdcd;
+  border-radius: 1000rpx;
+  background-color: #fff;
+}
+
+.poem {
+  border: 1rpx solid #dedede;
+  background-color: #000;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding-left: 20rpx;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 10rpx;
+  max-height: 700rpx;
+  overflow: scroll;
+}
+
+.poem .classic {
+  margin: 0 auto;
+  height: 400rpx;
+  writing-mode: vertical-rl; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+  text-align: center;
+  padding-top: 40rpx;
+  padding-left: 40rpx;
+  font-size: 40rpx;
+  letter-spacing: 10rpx; /*文字间距*/
+  line-height: 70rpx; /*文字行高*/
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 75%;
+  bottom: 20rpx;
+  /* border: 2rpx solid #fff; */
+}
+
+.menuItem {
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background: #fff;
+  border: 2rpx solid #000;
+  border-radius: 50%;
+  color: #000;
+  margin-right: 5rpx;
+}
+
+.on {
+  background: #003277;
+  color: #fff;
+}
+
+.helper {
+  position: relative;
+  /* bottom: 50rpx; */
+  width: 80%;
+  margin: 40rpx auto 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 32rpx;
+  color: darkorange;
+}

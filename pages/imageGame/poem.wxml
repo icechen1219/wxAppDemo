@@ -1,0 +1,32 @@
+<!--pages/emotion/guessEmotion.wxml-->
+<view class='body'>
+  <view class='imageArea' wx:if='{{imageUrl!=null}}'>
+    <image src='{{imageUrl}}' mode='aspectFill'></image>
+    <textarea bindinput='getTips' placeholder='此次可填一些关于图片的描述，比如时间、地点、人物、心情等' class='tips' wx:if='{{fileChoosed==true}}'></textarea>
+  </view>
+
+  <scroll-view class='poem' wx:if='{{poems.length>0}}' scroll-y='true'>
+    <block wx:for="{{poems}}" wx:for-item="item">
+      <text class='{{poemType}}' wx:if='{{item.Optimum}}'>{{item.PoemContent}}</text>
+      <text wx:if='{{item.Optimum}}'>\n\n—— {{author}} {{item.TimeStamp}}</text>
+    </block>
+    <view class='menu'>
+      <block wx:for="{{poems}}" wx:for-item="item">
+        <text class='menuItem {{item.Optimum?"on":""}}' bindtap='swapPoem' data-index='{{index}}'>{{index + 1}}  </text>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<button class='choose' bindtap='selectImage' type='default' wx:if='{{canChoose==true}}'>{{chooseButton}}</button>
+<view  class='upload'>
+  <label for='poemType' wx:if='{{canUpload==true}}'>古体诗：</label>
+  <switch class='poemType' id='poemType' checked='{{poemType=="classic"?"checked":""}}'      bindchange="switch1Change" wx:if='{{canUpload==true}}' />
+  <button class='write' bindtap='upload' type='primary' wx:if='{{canUpload==true}}'>{{upButton}}</button>
+</view>
+<view class='helper'>
+  <text>上传照片让我为你写诗吧~测试你的诗情指数如何~</text>
+</view>
+<view class='more-fun'>
+  <text bindtap='gotoBeauty'>更多好玩(^_^)</text>
+</view>
+<!-- <canvas canvas-id='myCanvas' class='canvas-box'></canvas> -->

@@ -1,0 +1,141 @@
+/* pages/emotion/guessEmotion.wxss */
+
+.choose {
+  width: 90%;
+  margin-top: 10rpx;
+}
+
+.imageArea {
+  width: 500rpx;
+  height: 500rpx;
+  text-align: center;
+  left: 10rpx;
+  padding: 0;
+  position: relative;
+}
+
+.imageArea image {
+  width: 500rpx;
+  height: 500rpx;
+  border: 2rpx solid #cdcdcd;
+  border-radius: 1000rpx;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+}
+
+.imageArea .faceDetail {
+  position: absolute;
+  z-index: 10;
+  border: 4rpx solid rgba(0, 0, 205, 1);
+}
+
+.imageArea .info {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  line-height: 30px;
+  font-size: 18px;
+  background: blue;
+   /* box-shadow: 1px 2px 3px #e9d985;  */
+  border: 1px solid #dace7c;
+  /* border-radius: 4px; */
+  text-align: center;
+  color: #fff;
+}
+
+.imageArea .nav {
+  position: absolute;
+  top: -8px;
+  left: 45%;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  background: blue;
+  border-left: 1px solid #dace7c;
+  border-top: 1px solid #dace7c;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 9;
+  top: 150rpx;
+  left: 70%;
+}
+
+.result view {
+  border-bottom: 1rpx dashed #dedede;
+}
+
+.result view:hover {
+  background: yellow;
+  border: 1rpx solid orange;
+}
+
+.result view text {
+  display: block;
+  font-size: 32rpx;
+  color: magenta;
+}
+
+.readMethod {
+  color: #000;
+  font-size: 32rpx;
+}
+
+.error {
+  color: red;
+  font-size: 50rpx;
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  top: 300rpx;
+  left: 20%;
+}
+
+.yanzhi {
+  border: 1rpx solid #dedede;
+  border-radius: 10rpx;
+  background-color: #333;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.helper {
+  position: relative;
+  /* bottom: 50rpx; */
+  width: 80%;
+  margin: 20rpx auto 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 32rpx;
+  color: darkorange;
+}
+
+.canvas-box {
+  /*将canvas假隐藏起来，避免下拉时出现太多空白区域*//*严重bug，开发工具正常显示，真机会出现canvas区域*//*position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;*/
+  margin: 0;
+  padding: 0;
+  width: 600rpx;
+  height: 600rpx;
+  opacity: 1;
+  /*display: none; 设置为none时无法绘图*/
+}

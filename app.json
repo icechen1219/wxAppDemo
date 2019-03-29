@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/emotion/guessEmotion",
+    "pages/weather/weather",
+    "pages/movie/movie",
+    "pages/imageGame/poem",
+    "pages/kidstory/baoyin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "威扬咨询",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/ico-home.png",
+        "selectedIconPath": "images/ico-home-d.png"
+      },
+      {
+        "pagePath": "pages/emotion/guessEmotion",
+        "text": "测颜值",
+        "iconPath": "images/ico-yanzhi.png",
+        "selectedIconPath": "images/ico-yanzhi-d.png"
+      },
+      {
+        "pagePath": "pages/imageGame/poem",
+        "text": "为你写诗",
+        "iconPath": "images/ico-poem.png",
+        "selectedIconPath": "images/ico-poem.png"
+      },
+      {
+        "pagePath": "pages/kidstory/baoyin",
+        "text": "儿童节",
+        "iconPath": "images/ico-kid.png",
+        "selectedIconPath": "images/ico-kid.png"
+      }
+    ]
+  }
+}
